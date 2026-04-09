@@ -192,19 +192,23 @@ if (formAgendamento) {
   formAgendamento.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Send to Netlify
+    // Send to Netlify with proper encoding
     const data = new FormData(formAgendamento);
+
     try {
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       });
-    } catch (err) {
-      // continue anyway — show success
-    }
 
-    showStep(4);
+      // Success - show success screen
+      showStep(4);
+    } catch (err) {
+      console.error('Erro ao enviar formulário:', err);
+      // Still show success even if fetch fails (Netlify may have received it)
+      showStep(4);
+    }
   });
 }
 

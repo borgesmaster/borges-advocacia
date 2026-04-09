@@ -675,6 +675,17 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
+  <!-- Netlify Forms Support -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.open();
+        }
+      });
+    }
+  </script>
+
   <script src="js/main.js"></script>
 </body>
 </html>
