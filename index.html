@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Borges & Borges Advocacia — Direito do Trabalho, Previdenciário, Penal e do Consumidor. São Paulo e Cotia/SP." />
+  <meta name="keywords" content="advogado, advocacia, direito trabalhista, direito previdenciário, direito penal, direito do consumidor, São Paulo, Cotia" />
+  <meta property="og:title" content="Borges & Borges Advocacia" />
+  <meta property="og:description" content="Comprometidos com a sua defesa. Atuação em Direito do Trabalho, Previdenciário, Penal e do Consumidor." />
+  <meta property="og:type" content="website" />
+  <title>Borges & Borges Advocacia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════ LOADER ══════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <img src="assets/logo-branca.png" alt="Borges & Borges" class="loader-logo" onerror="this.style.display='none'" />
+      <div class="loader-text">BORGES <span>&</span> BORGES</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo.png" alt="Borges & Borges Advocacia" onerror="this.style.display='none'" />
+        <span class="nav-logo-text">BORGES <em>&</em> BORGES</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#areas">Áreas de Atuação</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#agendamento" class="nav-cta">Agendar Consulta</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+      <li><a href="#areas" class="mobile-link">Áreas de Atuação</a></li>
+      <li><a href="#equipe" class="mobile-link">Equipe</a></li>
+      <li><a href="#blog" class="mobile-link">Blog</a></li>
+      <li><a href="#contato" class="mobile-link">Contato</a></li>
+      <li><a href="#agendamento" class="mobile-link cta">Agendar Consulta</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Advocacia de Alta Performance</p>
+      <h1 class="hero-title reveal-up delay-1">
+        Seu Direito,<br />
+        <span class="hero-title-accent">Nossa Causa.</span>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-2">
+        Comprometidos com a defesa dos seus direitos nas esferas trabalhista,<br class="hide-mobile" />
+        previdenciária, penal e do consumidor.
+      </p>
+      <div class="hero-actions reveal-up delay-3">
+        <a href="#agendamento" class="btn-primary">Consulta Gratuita</a>
+        <a href="#areas" class="btn-ghost">Conheça Nossas Áreas</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Rolar</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ STATS ══════════════════════ -->
+  <section id="stats">
+    <div class="stats-container">
+      <div class="stat-item reveal-up">
+        <span class="stat-number" data-target="3">0</span>
+        <span class="stat-label">Advogados Especialistas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up delay-1">
+        <span class="stat-number" data-target="4">0</span>
+        <span class="stat-label">Áreas de Atuação</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up delay-2">
+        <span class="stat-number" data-target="2">0</span>
+        <span class="stat-label">Unidades de Atendimento</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up delay-3">
+        <span class="stat-number" data-target="100">0</span><span class="stat-symbol">%</span>
+        <span class="stat-label">Comprometimento</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SOBRE ══════════════════════ -->
+  <section id="sobre">
+    <div class="section-container">
+      <div class="sobre-grid">
+        <div class="sobre-visual reveal-left">
+          <div class="sobre-img-frame">
+            <div class="sobre-img-bg"></div>
+            <div class="sobre-badge">
+              <i class="fas fa-balance-scale"></i>
+              <span>35 Anos de Tradição</span>
+            </div>
+          </div>
+          <div class="sobre-pillar">
+            <div class="pillar-line"></div>
+            <div class="pillar-line"></div>
+            <div class="pillar-line"></div>
+          </div>
+        </div>
+        <div class="sobre-text reveal-right">
+          <p class="section-eyebrow">Sobre o Escritório</p>
+          <h2 class="section-title">Tradição, Ética e<br /><em>Comprometimento</em></h2>
+          <p class="sobre-desc">
+            O escritório <strong>Borges & Borges Advocacia</strong> foi constituído com o propósito de oferecer
+            soluções jurídicas personalizadas, fundamentadas na ética, no rigor técnico e no comprometimento
+            irrestrito com os interesses de cada cliente.
+          </p>
+          <p class="sobre-desc">
+            Por se tratar de uma atividade econômica de natureza <strong>personalíssima</strong>, cada advogado
+            atua de forma individual, assinando pessoalmente suas respectivas demandas — o que garante
+            atenção exclusiva, responsabilidade direta e excelência em cada caso.
+          </p>
+          <div class="sobre-valores">
+            <div class="valor-item">
+              <i class="fas fa-shield-halved"></i>
+              <div>
+                <strong>Ética Profissional</strong>
+                <span>Conduta irrepreensível em cada atuação</span>
+              </div>
+            </div>
+            <div class="valor-item">
+              <i class="fas fa-magnifying-glass"></i>
+              <div>
+                <strong>Rigor Técnico</strong>
+                <span>Análise profunda de cada demanda</span>
+              </div>
+            </div>
+            <div class="valor-item">
+              <i class="fas fa-handshake"></i>
+              <div>
+                <strong>Atenção Personalizada</strong>
+                <span>Acompanhamento próximo em todo o processo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ÁREAS DE ATUAÇÃO ══════════════════════ -->
+  <section id="areas">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">Especialidades</p>
+        <h2 class="section-title">Áreas de <em>Atuação</em></h2>
+        <p class="section-subtitle">Atuamos com excelência nas principais áreas do direito que impactam diretamente a vida de pessoas e empresas.</p>
+      </div>
+      <div class="areas-grid">
+
+        <div class="area-card reveal-up delay-1">
+          <div class="area-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3>Direito do Trabalho</h3>
+          <p>Defesa de trabalhadores e empregadores em todas as fases do processo trabalhista: rescisão, horas extras, assédio, FGTS, verbas rescisórias e muito mais.</p>
+          <a href="#agendamento" class="area-link">Consultar <i class="fas fa-arrow-right"></i></a>
+          <div class="area-bg-icon"><i class="fas fa-hard-hat"></i></div>
+        </div>
+
+        <div class="area-card reveal-up delay-2">
+          <div class="area-icon">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <h3>Direito Previdenciário</h3>
+          <p>Aposentadorias, pensões por morte, auxílios, revisão de benefícios do INSS, BPC/LOAS e recursos administrativos e judiciais junto ao INSS.</p>
+          <a href="#agendamento" class="area-link">Consultar <i class="fas fa-arrow-right"></i></a>
+          <div class="area-bg-icon"><i class="fas fa-hospital"></i></div>
+        </div>
+
+        <div class="area-card reveal-up delay-3">
+          <div class="area-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h3>Direito Penal</h3>
+          <p>Defesa em crimes dolosos e culposos, habeas corpus, liberdade provisória, recursos criminais, execução penal e acompanhamento em todas as instâncias.</p>
+          <a href="#agendamento" class="area-link">Consultar <i class="fas fa-arrow-right"></i></a>
+          <div class="area-bg-icon"><i class="fas fa-gavel"></i></div>
+        </div>
+
+        <div class="area-card reveal-up delay-4">
+          <div class="area-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Direito do Consumidor</h3>
+          <p>Ações contra cobranças indevidas, negativação ilegal, produtos defeituosos, contratos abusivos, danos morais e materiais em relações de consumo.</p>
+          <a href="#agendamento" class="area-link">Consultar <i class="fas fa-arrow-right"></i></a>
+          <div class="area-bg-icon"><i class="fas fa-user-shield"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EQUIPE ══════════════════════ -->
+  <section id="equipe">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">Nossa Equipe</p>
+        <h2 class="section-title">Os <em>Profissionais</em><br />por Trás da sua Defesa</h2>
+      </div>
+      <div class="equipe-grid">
+
+        <div class="membro-card reveal-up delay-1">
+          <div class="membro-avatar">
+            <div class="avatar-placeholder">
+              <span>CM</span>
+            </div>
+            <div class="membro-status admin">Sócio Administrador</div>
+          </div>
+          <div class="membro-info">
+            <h3>Dr. Cassius Marcellus<br />Aparecido Borges</h3>
+            <p class="membro-oab">OAB/SP 421.154</p>
+            <p class="membro-desc">Especialista na proteção das garantias fundamentais e no exercício do contraditório, o Dr. Cassius Marcellus atua desde 2018 com foco exclusivo na esfera criminal. É pós-graduado em Direito Penal e Processo Penal pela Pontifícia Universidade Católica de São Paulo (PUC-SP), uma das mais tradicionais instituições jurídicas do país. Sua atuação combina o dinamismo da advocacia moderna com o domínio técnico necessário para o enfrentamento de questões complexas no Direito Penal material e adjetivo.</p>
+            <div class="membro-areas">
+              <span>Penal</span>
+              <span>Processo Penal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="membro-card featured reveal-up delay-2">
+          <div class="membro-avatar">
+            <div class="avatar-placeholder">
+              <span>MV</span>
+            </div>
+            <div class="membro-status admin">Sócio Administrador</div>
+          </div>
+          <div class="membro-info">
+            <h3>Dr. Marcus Vinicius<br />Aparecido Borges</h3>
+            <p class="membro-oab">OAB/SP 315.078</p>
+            <p class="membro-desc">Atuante no cenário jurídico desde 2010, o Dr. Marcus Vinicius dedica sua prática profissional à complexidade do Direito Civil e de suas ramificações processuais. Pós-graduado em Direito Processual Civil pelo Centro Universitário FIEO (Unifieo), sua expertise concentra-se na gestão estratégica de litígios, técnica recursal e defesa de interesses em juízo, garantindo uma representação processual técnica e pautada pelas mais recentes atualizações do Código de Processo Civil.</p>
+            <div class="membro-areas">
+              <span>Direito Civil</span>
+              <span>Processo Civil</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="membro-card reveal-up delay-3">
+          <div class="membro-avatar">
+            <div class="avatar-placeholder">
+              <span>JA</span>
+            </div>
+            <div class="membro-status">Sócio</div>
+          </div>
+          <div class="membro-info">
+            <h3>Dr. Justiniano<br />Aparecido Borges</h3>
+            <p class="membro-oab">OAB/SP 107.585</p>
+            <p class="membro-desc">Com uma trajetória consolidada ao longo de mais de 35 anos de advocacia efetiva, o Dr. Justiniano é o pilar de experiência e consultoria estratégica da Borges & Borges Advocacia. Renomado jurista, sua atuação é pautada pelo rigor técnico e pela ética institucional. É pós-graduado em Direito do Trabalho pela Universidade São Francisco (USF), acumulando um profundo conhecimento prático e teórico na regulação das relações laborais, sindicais e previdenciárias.</p>
+            <div class="membro-areas">
+              <span>Direito do Trabalho</span>
+              <span>Previdenciário</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ AGENDAMENTO ══════════════════════ -->
+  <section id="agendamento">
+    <div class="section-container">
+      <div class="agendar-wrapper">
+        <div class="agendar-text reveal-left">
+          <p class="section-eyebrow light">Agende Agora</p>
+          <h2 class="section-title light">Consulta <em>Personalizada</em><br />Para o Seu Caso</h2>
+          <p class="agendar-desc">Atendemos de forma presencial em São Paulo e Cotia, ou virtualmente por videochamada. A primeira consulta é para entendermos o seu caso.</p>
+          <div class="agendar-opcoes">
+            <div class="opcao-item">
+              <i class="fas fa-building"></i>
+              <div>
+                <strong>Presencial — Sede SP</strong>
+                <span>Praça da Sé, 371, CJ 812 — Sé</span>
+              </div>
+            </div>
+            <div class="opcao-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Presencial — Cotia</strong>
+                <span>Av. Lyons, 479, 1º andar — Jardim Leonor</span>
+              </div>
+            </div>
+            <div class="opcao-item">
+              <i class="fas fa-video"></i>
+              <div>
+                <strong>Consulta Virtual</strong>
+                <span>Videochamada em horário agendado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="agendar-form-box reveal-right">
+          <form name="agendamento" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="agendar-form" id="formAgendamento">
+            <input type="hidden" name="form-name" value="agendamento" />
+            <p class="hidden"><label>Bot: <input name="bot-field" /></label></p>
+
+            <div class="form-steps">
+              <!-- Step 1 -->
+              <div class="form-step active" data-step="1">
+                <h4>1. Como prefere ser atendido?</h4>
+                <div class="tipo-grid">
+                  <label class="tipo-option">
+                    <input type="radio" name="tipo" value="Presencial — São Paulo" required />
+                    <div class="tipo-card">
+                      <i class="fas fa-building"></i>
+                      <span>Presencial SP</span>
+                    </div>
+                  </label>
+                  <label class="tipo-option">
+                    <input type="radio" name="tipo" value="Presencial — Cotia" />
+                    <div class="tipo-card">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Presencial Cotia</span>
+                    </div>
+                  </label>
+                  <label class="tipo-option">
+                    <input type="radio" name="tipo" value="Virtual" />
+                    <div class="tipo-card">
+                      <i class="fas fa-video"></i>
+                      <span>Virtual</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>Área do Direito</label>
+                  <select name="area" required>
+                    <option value="">Selecione a área...</option>
+                    <option value="Direito do Trabalho">Direito do Trabalho</option>
+                    <option value="Direito Previdenciário">Direito Previdenciário</option>
+                    <option value="Direito Penal">Direito Penal</option>
+                    <option value="Direito do Consumidor">Direito do Consumidor</option>
+                    <option value="Não sei / Outra">Não sei / Outra</option>
+                  </select>
+                </div>
+                <button type="button" class="btn-step-next" onclick="nextStep(1)">Próximo <i class="fas fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="form-step" data-step="2">
+                <h4>2. Seus dados de contato</h4>
+                <div class="form-group">
+                  <label>Nome Completo *</label>
+                  <input type="text" name="nome" placeholder="Seu nome completo" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Telefone / WhatsApp *</label>
+                    <input type="tel" name="telefone" placeholder="(11) 99999-9999" required />
+                  </div>
+                  <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" name="email" placeholder="seu@email.com" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Descreva brevemente seu caso</label>
+                  <textarea name="descricao" rows="3" placeholder="Conte-nos um pouco sobre sua situação..."></textarea>
+                </div>
+                <div class="form-nav">
+                  <button type="button" class="btn-step-back" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                  <button type="button" class="btn-step-next" onclick="nextStep(2)">Próximo <i class="fas fa-arrow-right"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="form-step" data-step="3">
+                <h4>3. Preferência de data e horário</h4>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Data de Preferência</label>
+                    <input type="date" name="data" min="" />
+                  </div>
+                  <div class="form-group">
+                    <label>Turno</label>
+                    <select name="turno">
+                      <option value="Manhã (9h–12h)">Manhã (9h–12h)</option>
+                      <option value="Tarde (13h–17h)">Tarde (13h–17h)</option>
+                      <option value="Qualquer horário">Qualquer horário</option>
+                    </select>
+                  </div>
+                </div>
+                <p class="form-obs">Após o envio, entraremos em contato para confirmar o horário disponível.</p>
+                <div class="form-nav">
+                  <button type="button" class="btn-step-back" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                  <button type="submit" class="btn-primary full">Confirmar Agendamento <i class="fas fa-check"></i></button>
+                </div>
+              </div>
+
+              <!-- Sucesso -->
+              <div class="form-step success-step" data-step="4">
+                <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+                <h4>Solicitação Enviada!</h4>
+                <p>Recebemos sua solicitação. Nossa equipe entrará em contato em até 24 horas para confirmar o agendamento.</p>
+                <a href="https://wa.me/5511973306686" target="_blank" class="btn-whatsapp-form">
+                  <i class="fab fa-whatsapp"></i> Confirmar via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Step indicator -->
+            <div class="step-dots">
+              <span class="dot active" data-dot="1"></span>
+              <span class="dot" data-dot="2"></span>
+              <span class="dot" data-dot="3"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ BLOG ══════════════════════ -->
+  <section id="blog">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">Conteúdo Jurídico</p>
+        <h2 class="section-title">Blog & <em>Novidades</em></h2>
+        <p class="section-subtitle">Informação jurídica clara e acessível para você conhecer seus direitos.</p>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card featured reveal-up delay-1">
+          <div class="blog-img-placeholder">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Trabalhista</span>
+            <h3>O que fazer quando sou demitido sem justa causa?</h3>
+            <p>Entenda seus direitos rescisórios, aviso prévio, seguro-desemprego e como agir caso a empresa não cumpra as obrigações legais...</p>
+            <a href="blog.html" class="blog-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal-up delay-2">
+          <div class="blog-img-placeholder small">
+            <i class="fas fa-hospital"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Previdenciário</span>
+            <h3>INSS negou seu benefício? Saiba como recorrer</h3>
+            <p>Conheça os prazos e os caminhos administrativos e judiciais para contestar a negativa do INSS...</p>
+            <a href="blog.html" class="blog-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal-up delay-3">
+          <div class="blog-img-placeholder small">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Consumidor</span>
+            <h3>Nome negativado indevidamente: como agir</h3>
+            <p>A inscrição indevida em cadastros de inadimplentes como SPC e Serasa gera direito à indenização por danos morais...</p>
+            <a href="blog.html" class="blog-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal-up delay-4">
+          <div class="blog-img-placeholder small">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Penal</span>
+            <h3>Fui preso em flagrante: quais são meus direitos?</h3>
+            <p>Entenda o que a lei garante ao cidadão preso em flagrante delito e qual a importância da assistência jurídica imediata...</p>
+            <a href="blog.html" class="blog-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+      <div class="blog-cta reveal-up">
+        <a href="blog.html" class="btn-outline">Ver Todos os Artigos <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CONTATO ══════════════════════ -->
+  <section id="contato">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <p class="section-eyebrow">Fale Conosco</p>
+        <h2 class="section-title">Entre em <em>Contato</em></h2>
+      </div>
+      <div class="contato-grid">
+
+        <div class="contato-info reveal-left">
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Telefone</strong>
+              <a href="tel:1147037456">(11) 4703-7456</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5511973306686" target="_blank">(11) 97330-6686</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:advborgeseborges@outlook.com">advborgeseborges@outlook.com</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fas fa-building"></i></div>
+            <div>
+              <strong>Sede — São Paulo</strong>
+              <span>Praça da Sé, nº 371, CJ 812<br />Bairro Sé — São Paulo/SP</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Filial — Cotia</strong>
+              <span>Av. Lyons, 479, 1º andar<br />Jardim Leonor — Cotia/SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-form-box reveal-right">
+          <form name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contato-form">
+            <input type="hidden" name="form-name" value="contato" />
+            <p class="hidden"><label>Bot: <input name="bot-field" /></label></p>
+            <div class="form-group">
+              <label>Nome *</label>
+              <input type="text" name="nome" placeholder="Seu nome completo" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" name="telefone" placeholder="(11) 99999-9999" />
+              </div>
+              <div class="form-group">
+                <label>E-mail *</label>
+                <input type="email" name="email" placeholder="seu@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Assunto</label>
+              <select name="assunto">
+                <option value="Consulta Jurídica">Consulta Jurídica</option>
+                <option value="Informação">Informação Geral</option>
+                <option value="Parceria">Parceria</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mensagem *</label>
+              <textarea name="mensagem" rows="4" placeholder="Descreva brevemente como podemos ajudá-lo..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Mapa -->
+      <div class="mapa-container reveal-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4!2d-46.6333!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xa70fb9e8b2d4b5a1!2sPra%C3%A7a%20da%20S%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Localização Borges & Borges Advocacia">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-branca.png" alt="Borges & Borges" class="footer-logo" onerror="this.style.display='none'" />
+        <p class="footer-brand-name">BORGES <span>&</span> BORGES<br /><em>Advocacia</em></p>
+        <p class="footer-tagline">Comprometidos com a sua defesa.</p>
+      </div>
+      <div class="footer-nav">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="#sobre">Sobre o Escritório</a></li>
+          <li><a href="#areas">Áreas de Atuação</a></li>
+          <li><a href="#equipe">Nossa Equipe</a></li>
+          <li><a href="#blog">Blog Jurídico</a></li>
+          <li><a href="#agendamento">Agendar Consulta</a></li>
+        </ul>
+      </div>
+      <div class="footer-areas">
+        <h5>Especialidades</h5>
+        <ul>
+          <li>Direito do Trabalho</li>
+          <li>Direito Previdenciário</li>
+          <li>Direito Penal</li>
+          <li>Direito do Consumidor</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contato</h5>
+        <p><i class="fas fa-phone"></i> (11) 4703-7456</p>
+        <p><i class="fab fa-whatsapp"></i> (11) 97330-6686</p>
+        <p><i class="fas fa-envelope"></i> advborgeseborges@outlook.com</p>
+        <p><i class="fas fa-building"></i> Praça da Sé, 371, CJ 812 — SP</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Lyons, 479 — Cotia/SP</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Borges & Borges Advocacia. Todos os direitos reservados.</p>
+      <p class="footer-oab">OAB/SP 421.154 · OAB/SP 315.078 · OAB/SP 107.585</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════ FLOATING BUTTONS ══════════════════════ -->
+  <a href="https://wa.me/5511973306686?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+     target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wpp-tooltip">Fale no WhatsApp</span>
+  </a>
+
+  <button id="backTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

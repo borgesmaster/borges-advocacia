@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog Jurídico — Borges & Borges Advocacia. Artigos sobre Direito do Trabalho, Previdenciário, Penal e do Consumidor." />
+  <title>Blog Jurídico — Borges & Borges Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Blog page extras */
+    .blog-hero {
+      background: linear-gradient(135deg, #060d24 0%, #0d1b4b 60%, #0a2060 100%);
+      padding: 160px 40px 80px;
+      text-align: center;
+    }
+    .blog-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .blog-hero h1 em { color: var(--gold); font-style: normal; }
+    .blog-hero p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .blog-filters {
+      display: flex; justify-content: center; gap: 10px;
+      flex-wrap: wrap;
+      padding: 48px 40px 0;
+      max-width: 900px; margin: 0 auto;
+    }
+    .filter-btn {
+      padding: 8px 22px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      border: 1.5px solid rgba(0,0,0,0.1);
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .blog-page-grid {
+      max-width: 1200px; margin: 0 auto;
+      padding: 48px 40px 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .blog-page-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+    }
+    .blog-page-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+
+    .blog-page-img {
+      height: 180px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .blog-page-img i { font-size: 2.5rem; color: rgba(255,255,255,0.25); }
+
+    .blog-page-body { padding: 28px; }
+    .blog-page-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px;
+    }
+    .blog-page-date {
+      font-size: 0.72rem;
+      color: var(--silver);
+      font-weight: 500;
+    }
+    .blog-page-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .blog-page-body p {
+      font-size: 0.84rem;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .blog-read-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue-light);
+      transition: gap 0.2s;
+    }
+    .blog-read-link:hover { gap: 10px; }
+
+    .blog-cta-banner {
+      background: var(--navy);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .blog-cta-banner h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .blog-cta-banner h2 em { color: var(--gold); font-style: normal; }
+    .blog-cta-banner p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .blog-page-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .blog-page-grid { grid-template-columns: 1fr; padding: 32px 24px 60px; }
+      .blog-hero { padding: 140px 24px 60px; }
+      .blog-filters { padding: 32px 24px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Borges & Borges Advocacia" onerror="this.style.display='none'" />
+        <span class="nav-logo-text">BORGES <em>&</em> BORGES</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#areas">Áreas de Atuação</a></li>
+        <li><a href="index.html#equipe">Equipe</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html#agendamento" class="nav-cta">Agendar Consulta</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <div class="blog-hero">
+    <p class="section-eyebrow" style="color:var(--gold); display:block; margin-bottom:14px;">Conteúdo Jurídico</p>
+    <h1>Blog <em>Jurídico</em></h1>
+    <p>Informação clara e acessível para você conhecer e defender seus direitos.</p>
+  </div>
+
+  <!-- Filters -->
+  <div class="blog-filters">
+    <button class="filter-btn active">Todos</button>
+    <button class="filter-btn">Trabalhista</button>
+    <button class="filter-btn">Previdenciário</button>
+    <button class="filter-btn">Penal</button>
+    <button class="filter-btn">Consumidor</button>
+  </div>
+
+  <!-- Articles Grid -->
+  <div class="blog-page-grid">
+
+    <article class="blog-page-card reveal-up">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, var(--navy), #2952c4);">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Trabalhista</span>
+          <span class="blog-page-date">Jan 2025</span>
+        </div>
+        <h3>O que fazer quando sou demitido sem justa causa?</h3>
+        <p>Entenda seus direitos rescisórios, aviso prévio, seguro-desemprego e como agir caso a empresa não cumpra as obrigações legais.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="blog-page-card reveal-up delay-1">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, #1a5276, #2e86c1);">
+        <i class="fas fa-hospital"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Previdenciário</span>
+          <span class="blog-page-date">Fev 2025</span>
+        </div>
+        <h3>INSS negou seu benefício? Saiba como recorrer</h3>
+        <p>Conheça os prazos e os caminhos administrativos e judiciais para contestar a negativa do INSS e garantir o que é seu por direito.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="blog-page-card reveal-up delay-2">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, #1b2631, #2e4053);">
+        <i class="fas fa-gavel"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Penal</span>
+          <span class="blog-page-date">Mar 2025</span>
+        </div>
+        <h3>Fui preso em flagrante: quais são meus direitos?</h3>
+        <p>Entenda o que a lei garante ao cidadão preso em flagrante delito e qual a importância da assistência jurídica imediata.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="blog-page-card reveal-up delay-1">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, #1a4a2e, #1e8449);">
+        <i class="fas fa-user-shield"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Consumidor</span>
+          <span class="blog-page-date">Mar 2025</span>
+        </div>
+        <h3>Nome negativado indevidamente: como agir</h3>
+        <p>A inscrição indevida em cadastros como SPC e Serasa gera direito à indenização por danos morais. Saiba como proceder.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="blog-page-card reveal-up delay-2">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, var(--navy), #1a3a8f);">
+        <i class="fas fa-clock"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Trabalhista</span>
+          <span class="blog-page-date">Abr 2025</span>
+        </div>
+        <h3>Horas extras não pagas: como calcular e cobrar</h3>
+        <p>Saiba como identificar horas extras devidas, como calcular corretamente e quais os prazos para ingressar com ação trabalhista.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="blog-page-card reveal-up delay-3">
+      <div class="blog-page-img" style="background: linear-gradient(135deg, #4a235a, #7d3c98);">
+        <i class="fas fa-wheelchair"></i>
+      </div>
+      <div class="blog-page-body">
+        <div class="blog-page-meta">
+          <span class="blog-tag">Previdenciário</span>
+          <span class="blog-page-date">Abr 2025</span>
+        </div>
+        <h3>BPC/LOAS: quem tem direito e como solicitar</h3>
+        <p>O Benefício de Prestação Continuada garante 1 salário mínimo a idosos e pessoas com deficiência de baixa renda. Veja como pedir.</p>
+        <a href="#" class="blog-read-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <div class="blog-cta-banner">
+    <h2>Tem dúvidas sobre o <em>seu caso?</em></h2>
+    <p>Agende uma consulta com um de nossos especialistas.</p>
+    <a href="index.html#agendamento" class="btn-primary">Agendar Consulta Gratuita</a>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-brand-name">BORGES <span>&</span> BORGES<br /><em>Advocacia</em></p>
+        <p class="footer-tagline">Comprometidos com a sua defesa.</p>
+      </div>
+      <div class="footer-nav">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="index.html#sobre">Sobre o Escritório</a></li>
+          <li><a href="index.html#areas">Áreas de Atuação</a></li>
+          <li><a href="index.html#equipe">Nossa Equipe</a></li>
+          <li><a href="blog.html">Blog Jurídico</a></li>
+          <li><a href="index.html#agendamento">Agendar Consulta</a></li>
+        </ul>
+      </div>
+      <div class="footer-areas">
+        <h5>Especialidades</h5>
+        <ul>
+          <li>Direito do Trabalho</li>
+          <li>Direito Previdenciário</li>
+          <li>Direito Penal</li>
+          <li>Direito do Consumidor</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Contato</h5>
+        <p><i class="fas fa-phone"></i> (11) 4703-7456</p>
+        <p><i class="fab fa-whatsapp"></i> (11) 97330-6686</p>
+        <p><i class="fas fa-envelope"></i> advborgeseborges@outlook.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Borges & Borges Advocacia. Todos os direitos reservados.</p>
+      <p class="footer-oab">OAB/SP 421.154 · OAB/SP 315.078 · OAB/SP 107.585</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511973306686?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."
+     target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wpp-tooltip">Fale no WhatsApp</span>
+  </a>
+
+  <button id="backTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Back to top
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // Reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
