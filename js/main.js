@@ -172,11 +172,12 @@ function nextStep(from) {
     const radios = step.querySelectorAll('input[name="tipo"]');
     const checked = Array.from(radios).some(r => r.checked);
     if (!checked) {
-      radios.forEach(r => r.closest('.tipo-card').style.borderColor = '#ff3b30');
-      setTimeout(() => radios.forEach(r => r.closest('.tipo-card').style.borderColor = ''), 2000);
+      radios.forEach(r => r.nextElementSibling.style.borderColor = '#ff3b30');
+      setTimeout(() => radios.forEach(r => r.nextElementSibling.style.borderColor = ''), 2000);
       valid = false;
     }
   }
+
 
   if (!valid) return;
   showStep(from + 1);
@@ -192,21 +193,16 @@ if (formAgendamento) {
   formAgendamento.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Send to Netlify with proper encoding
     const data = new FormData(formAgendamento);
 
     try {
-      const response = await fetch('/', {
+      await fetch('https://formsubmit.co/ajax/advborgeseborges@outlook.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
+        body: data
       });
-
-      // Success - show success screen
       showStep(4);
     } catch (err) {
       console.error('Erro ao enviar formulário:', err);
-      // Still show success even if fetch fails (Netlify may have received it)
       showStep(4);
     }
   });
@@ -223,10 +219,9 @@ if (contatoForm) {
     btn.disabled = true;
 
     try {
-      await fetch('/', {
+      await fetch('https://formsubmit.co/ajax/advborgeseborges@outlook.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
+        body: data
       });
       btn.innerHTML = '<i class="fas fa-check"></i> Mensagem Enviada!';
       btn.style.background = '#34c759';
@@ -296,6 +291,16 @@ document.querySelectorAll('.area-card').forEach(card => {
   card.addEventListener('mouseleave', () => {
     card.style.transform = '';
   });
+});
+
+/* ── Form navigation buttons ────────────────────── */
+document.querySelectorAll('button[data-step]').forEach(btn => {
+  const step = btn.getAttribute('data-step');
+  if (btn.classList.contains('btn-step-next')) {
+    btn.addEventListener('click', () => nextStep(parseInt(step)));
+  } else if (btn.classList.contains('btn-step-back')) {
+    btn.addEventListener('click', () => prevStep(parseInt(step)));
+  }
 });
 
 /* ── Expose step functions globally ─────────────── */

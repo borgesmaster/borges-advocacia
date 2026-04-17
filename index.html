@@ -336,13 +336,11 @@
         </div>
 
         <div class="agendar-form-box reveal-right">
-          <form name="agendamento" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="agendar-form" id="formAgendamento">
-            <input type="hidden" name="form-name" value="agendamento" />
-            <input type="hidden" name="_to" value="advborgeseborges@outlook.com" />
-            <input type="hidden" name="_cc" value="cassius.ap.borges@gmail.com" />
+          <form action="https://formsubmit.co/advborgeseborges@outlook.com" method="POST" class="agendar-form" id="formAgendamento">
             <input type="hidden" name="_subject" value="Novo Agendamento de Consulta — Borges & Borges Advocacia" />
-            <input type="hidden" name="_redirect" value="/index.html?success=agendamento" />
-            <p class="hidden"><label>Bot: <input name="bot-field" /></label></p>
+            <input type="hidden" name="_cc" value="cassius.ap.borges@gmail.com" />
+            <input type="hidden" name="_redirect" value="https://borges-advocacia.com/index.html?success=agendamento" />
+            <input type="hidden" name="_captcha" value="false" />
 
             <div class="form-steps">
               <!-- Step 1 -->
@@ -382,7 +380,7 @@
                     <option value="Não sei / Outra">Não sei / Outra</option>
                   </select>
                 </div>
-                <button type="button" class="btn-step-next" onclick="nextStep(1)">Próximo <i class="fas fa-arrow-right"></i></button>
+                <button type="button" class="btn-step-next" data-step="1">Próximo <i class="fas fa-arrow-right"></i></button>
               </div>
 
               <!-- Step 2 -->
@@ -407,8 +405,8 @@
                   <textarea name="descricao" rows="3" placeholder="Conte-nos um pouco sobre sua situação..."></textarea>
                 </div>
                 <div class="form-nav">
-                  <button type="button" class="btn-step-back" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Voltar</button>
-                  <button type="button" class="btn-step-next" onclick="nextStep(2)">Próximo <i class="fas fa-arrow-right"></i></button>
+                  <button type="button" class="btn-step-back" data-step="2"><i class="fas fa-arrow-left"></i> Voltar</button>
+                  <button type="button" class="btn-step-next" data-step="2">Próximo <i class="fas fa-arrow-right"></i></button>
                 </div>
               </div>
 
@@ -431,7 +429,7 @@
                 </div>
                 <p class="form-obs">Após o envio, entraremos em contato para confirmar o horário disponível.</p>
                 <div class="form-nav">
-                  <button type="button" class="btn-step-back" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                  <button type="button" class="btn-step-back" data-step="3"><i class="fas fa-arrow-left"></i> Voltar</button>
                   <button type="submit" class="btn-primary full">Confirmar Agendamento <i class="fas fa-check"></i></button>
                 </div>
               </div>
@@ -572,12 +570,10 @@
         </div>
 
         <div class="contato-form-box reveal-right">
-          <form name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contato-form">
-            <input type="hidden" name="form-name" value="contato" />
-            <input type="hidden" name="_to" value="advborgeseborges@outlook.com" />
+          <form action="https://formsubmit.co/advborgeseborges@outlook.com" method="POST" class="contato-form">
             <input type="hidden" name="_subject" value="Novo Contato — Borges & Borges Advocacia" />
-            <input type="hidden" name="_redirect" value="/index.html?success=contato" />
-            <p class="hidden"><label>Bot: <input name="bot-field" /></label></p>
+            <input type="hidden" name="_redirect" value="https://borges-advocacia.com/index.html?success=contato" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="form-group">
               <label>Nome *</label>
               <input type="text" name="nome" placeholder="Seu nome completo" required />
